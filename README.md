@@ -21,16 +21,17 @@ Lianna: As someone who is not native to Seattle, I always found it difficult to 
 
 ## Summary Tables for User Stories:
 
-Priority	User	Description	Technical Implementation
-P0	As a user	I want to be able to make an account and log in and out of the application	Use Azure Authentication
-P0	As a user	I want to be able to view my online closet	Retrieve all clothing data in the database contained within the user’s userID
-P0	As a user	I want to be able to add clothing items into my online closet	create new data entries and submit them to MongoDB
-P0	As a user	I want to be able to edit/delete clothing items from my online closet	retrieve data for a clothing item using the clothingID and editing it or deleting its entry from MongoDB
-P0	As a user	I want to view today’s weather	fetch the API from weather.com and display aspects such as current temp, highs, lows, wind speed, etc.
-P0	As a user	I want to see what clothing items would suit the current weather	with the weather data fetched create internal tags (ex. If temp falls between 50-60 degrees temp=cool) then pull all clothing items from the user’s closet data that also have the corresponding tags
-P1	As a user	I want to see a recommended outfit based on the weather	same as above ^ but display only one item from each clothing category (ex. shirt, pants, shoes, jacket, etc). Probably randomize in the case of multiple options. 
-P1	As a user	I want an easy way to interpret the data from today’s weather	Create tags based on weather data (ex. If Wind speed < 8 mph then tag=slight breeze)
-P2	As a user	I want to learn about the weather in areas outside of Seattle	alter weather.com’s Seattle URL query to instead use the zip code imputed by the user
+| Priority | User | Description | Technical Implementation |
+|----------|------|-------------|-------------------------|
+| P0       | As a user | I want to be able to make an account and log in and out of the application | Use Azure Authentication |
+| P0       | As a user | I want to be able to view my online closet | Retrieve all clothing data in the database contained within the user’s userID |
+| P0       | As a user | I want to be able to add clothing items into my online closet | Create new data entries and submit them to MongoDB |
+| P0       | As a user | I want to be able to edit/delete clothing items from my online closet | Retrieve data for a clothing item using the clothingID and editing it or deleting its entry from MongoDB |
+| P0       | As a user | I want to view today’s weather | Fetch the API from weather.com and display aspects such as current temp, highs, lows, wind speed, etc. |
+| P0       | As a user | I want to see what clothing items would suit the current weather | With the weather data fetched, create internal tags (ex. If temp falls between 50-60 degrees temp=cool) then pull all clothing items from the user’s closet data that also have the corresponding tags |
+| P1       | As a user | I want to see a recommended outfit based on the weather | Same as above but display only one item from each clothing category (ex. shirt, pants, shoes, jacket, etc). Probably randomize in the case of multiple options. |
+| P1       | As a user | I want an easy way to interpret the data from today’s weather | Create tags based on weather data (ex. If Wind speed < 8 mph then tag=slight breeze) |
+| P2       | As a user | I want to learn about the weather in areas outside of Seattle | Alter weather.com’s Seattle URL query to instead use the zip code inputted by the user |
 
 
 ## Endpoints:
@@ -70,27 +71,15 @@ Fetchs clothing items with tags correlating to the weather to suggest an outfit
 
 ## Database Schema:
 Users:
+
 •	Username (String)
 •	Password (String)
+
 Closet:
+
 •	ClothingID (Number)
 •	ClothingPic (File? Picture?)
 •	ClothingTags (array of Strings)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### Citation:
