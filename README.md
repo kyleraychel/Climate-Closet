@@ -73,12 +73,15 @@ Fetchs clothing items with tags correlating to the weather to suggest an outfit
 Users:
 
 •	Username (String)
+
 •	Password (String)
 
 Closet:
 
 •	ClothingID (Number)
+
 •	ClothingPic (File? Picture?)
+
 •	ClothingTags (array of Strings)
 
 
