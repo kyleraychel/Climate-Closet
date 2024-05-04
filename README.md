@@ -1,7 +1,7 @@
 # Climate-Closet
 
 
-##Project Description:
+## Project Description:
 
 In the city of Seattle, weather can be unpredictable and there is a shared struggle among non-natives and tourists on understanding what to wear in the face of Seattle’s everchanging climate. For those who are not accustomed to Seattle’s weather, it can be a real pain to enjoy every aspect of the city. Will it rain? Is it windy? What will be the temperature at 5 PM and what should I wear? These questions can be answered with our solution, an intuitive weather application tailored to a user by using real-time data and user-friendly features to cope with Seattle’s weather patterns.
 
@@ -14,11 +14,12 @@ Kyle: I am interested in building out this application for the experience of usi
 Lianna: As someone who is not native to Seattle, I always found it difficult to understand the complexity of the weather here (like taking into account how the wind, rain, highs, and lows can affect your experience outside). As a developer, this would be an easy way to accomplish an experience that I personally have, while also applying it in ways that we have seen similarly in class. 
 
 
-##Architectural Diagram Mapping:
+## Architectural Diagram Mapping:
+
+![Architectural Diagram including client, server, and database interactions.](./Picture1.png)
 
 
-
-##Summary Tables for User Stories:
+## Summary Tables for User Stories:
 
 Priority	User	Description	Technical Implementation
 P0	As a user	I want to be able to make an account and log in and out of the application	Use Azure Authentication
@@ -32,33 +33,42 @@ P1	As a user	I want an easy way to interpret the data from today’s weather	Cre
 P2	As a user	I want to learn about the weather in areas outside of Seattle	alter weather.com’s Seattle URL query to instead use the zip code imputed by the user
 
 
-##Endpoints:
+## Endpoints:
+
 GET /user/login
+
 Allows users to log into their accounts. Closets are saved under each person’s account
 
 POST /user/register
+
 Allows users to create a new account
 
 GET user/closet/view
+
 Full view of clothing items currently saved on the database
 
 GET user/closet/{clothingID}
+
 View specific clothing items
 
 POST user/closet/{clothingID}/edit
+
 Update or delete tags associated with a specific clothing item
 
 POST user/closet/add
+
 Allows users to add clothing items to their online closet
 
 GET /weather/view
+
 Fetch API from weather.com to get weather statistics like current temp, wind speed, rain percentage, etc. saved into tags
 
 GET user/outfit
+
 Fetchs clothing items with tags correlating to the weather to suggest an outfit
 
 
-##Database Schema:
+## Database Schema:
 Users:
 •	Username (String)
 •	Password (String)
@@ -83,6 +93,7 @@ Closet:
 
 
 
-###Citation:
+### Citation:
+[Apps to decide what to wear today](https://freeappsforme.com/apps-to-decide-what-to-wear-today/)
 
 
